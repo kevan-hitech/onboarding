@@ -1,0 +1,40 @@
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>AlphaQuant Login</title>
+<link rel="stylesheet" type="text/css"
+      href="{% static 'pages/entry.css' %}">
+</head>
+
+
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h2>Create Entry!</h2>
+            <p>Make a page for the world to see!</p>
+
+
+            {{form.errors}}
+
+          </div>
+          <hr>
+        </div>
+
+        <form method="post" enctype="multipart/form-data" class="login-form">
+          {% csrf_token %}
+            {{form.media}}
+            {{form.as_p}}
+            <button type="submit">Create Entry</button>
+        </form>
+      </div>
+    </div>
+
+
+
+<input type="submit" value="Save"/>
+</form>
+</html>

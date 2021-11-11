@@ -1,0 +1,49 @@
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>AlphaQuant Login</title>
+<link rel="stylesheet" type="text/css"
+      href="{% static 'login/login.css' %}">
+<script src="myScript1.js"></script>
+</head>
+
+
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h2>Create Entry!</h2>
+            <p>Make a page for the world to see!</p>
+          </div><hr></div>
+
+          <div class="login-form">
+              {% if latest_sheet_list %}
+
+                {% for sheet in latest_sheet_list %}
+                <p><a href="{% url 'pages:results' sheet.id %}">
+                    {{ sheet.title }}</a>
+                    |
+                <a href="{% url 'pages:update' sheet.id %}">Edit</a>
+                </p>
+                    {% endfor %}
+              <a href="/pages/entry">Why not create something?</a>
+
+                {% else %}
+                    <p>No entries available.</p>
+              <a href="/pages/entry">Why not create something?</a>
+                {% endif %}
+            <div>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
+</html>
+
+
+
+
+

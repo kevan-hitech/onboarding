@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+
+img{
+  width: 24.99999%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form {
+  margin: auto;
+  min-height: 10%;
+  max-width: 80%;
+  background-color: white;
+  overflow: hidden;
+  text-align: center;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+.form p {
+  outline: 0;
+  width: 90%;
+  margin: auto;
+  font-size: 14px;
+}
+
+.form button {
+  outline: 0;
+  width: 80%;
+  left:10%;
+  margin: auto;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  background: #f45b69;
+}
+
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 90%;
+  border: 0;
+  margin: auto;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 2px solid white;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+
+table, th, td {
+  border: 3px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+
+.power div{
+overflow-x:auto;
+}
+
+.power table{
+    table-layout: fixed;
+    border: 0px solid black;
+    overflow-x: auto;
+    height: 2%;
+    text-align: center;
+}
+
+
+
+
+.form input:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input:focus {
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+body {
+  background-color: #f45b69;
+  font-family: "Roboto", sans-serif;
+}
+
+a{
+  background-color: #f44336;
+  color: white;
+  width:10%;
+  padding: 14px;
+  text-align: center;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.body {
+    text-align: left;
+    font-size: 14px;
+}
+
+.body h2, h3 {
+    text-align: left;
+    margin : auto;
+}
+
+.body h3 {
+    margin-left : 5%;
+}
+
+.body table{
+}

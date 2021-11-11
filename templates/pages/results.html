@@ -1,0 +1,105 @@
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+<meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>{{sheet.title}}</title>
+<link rel="stylesheet" type="text/css"
+        href="{% static 'pages/results.css' %}">
+</head>
+
+
+<body>
+
+    <div class="login-page">
+        <div class="form">
+            <div class="login">
+                <div class="login-header">
+                    <h2>{{ sheet.title }}</h2>
+                    {% if sheet.t_img %}
+                        <img src="{{sheet.t_img.url}}" alt="Profile Picture">
+                    {% else%}
+                        <img src="None" alt="None">
+                    {% endif %}
+
+                    <small>
+                        <em>{{ sheet.category }}</em>
+                    </small>
+
+                    <hr>
+                    <br>
+                    <p><a href="/edit/{{sheet.id}}">EDIT</a></p>
+                    <br>
+                </div>
+                <hr>
+            </div>
+
+        <div class="login-form">
+            <div>
+                <table class="info">
+                <tr>
+                <td>Debut</td>
+                <td>{{sheet.t_debut}}</td>
+                </tr>
+                <tr>
+                <td>Form Signature</td>
+                <td>{{sheet.t_form}}</td>
+                </tr>
+                <tr>
+                <td>Affiliation</td>
+                <td>{{sheet.t_affil}}</td>
+                </tr>
+                <tr>
+                <td>Birthday</td>
+                <td>{{sheet.t_bday}}</td>
+                </tr>
+                <tr>
+                <td>Birthplace</td>
+                <td>{{sheet.t_bplace}}</td>
+                </tr>
+                <tr>
+                <td>Age</td>
+                <td>{{sheet.t_age}}</td>
+                </tr>
+                </table>
+                </div>
+                <hr>
+                <br>
+                <div class="body">
+                {{sheet.body|safe}}
+            </div>
+
+            <div class="power">
+                <table id="power" class="power">
+                <tr>
+                <th>S</th>
+                <th>E</th>
+                <th>M</th>
+                <th>I</th>
+                <th>R</th>
+                <th>T</th>
+                <th>=</th>
+                </tr>
+                <tr>
+                <td>{{ sheet.rank_s }}</td>
+                <td>{{ sheet.rank_e }}</td>
+                <td>{{ sheet.rank_m }}</td>
+                <td>{{ sheet.rank_i }}</td>
+                <td>{{ sheet.rank_r }}</td>
+                <td>{{ sheet.rank_t }}</td>
+                <td><p id="total"></p></td>
+                </tr>
+                </table>
+            </div>
+
+            <h3>Trivia</h3>
+            <p>{{ sheet.section6 }}</p>
+
+        </div>
+        </div>
+    </div>
+</body>
+</form>
+</html>
