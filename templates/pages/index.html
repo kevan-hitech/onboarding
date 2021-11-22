@@ -23,17 +23,17 @@
               {% if latest_sheet_list %}
 
                 {% for sheet in latest_sheet_list %}
-                <p><a href="{% url 'pages:results' sheet.id %}">
-                    {{ sheet.title }}</a>
-                    |
-                <a href="{% url 'pages:update' sheet.id %}">Edit</a>
-                </p>
-                    {% endfor %}
-              <a href="/pages/entry">Why not create something?</a>
+                  <p><a href="{{sheet.slug }}">
+                      {{ sheet.name }}</a>
+                      {{ sheet.start_date }}
+                  <a href="edit/{{sheet.slug }}">Edit</a>
+                  </p>
+                {% endfor %}
+                <a href="/entry">Why not create something?</a>
 
                 {% else %}
                     <p>No entries available.</p>
-              <a href="/pages/entry">Why not create something?</a>
+              <a href="/entry">Why not create something?</a>
                 {% endif %}
             <div>
           </div>

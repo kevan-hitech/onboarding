@@ -34,7 +34,7 @@ STATICFILES_DIRS = (
 # Application definition
 
 INSTALLED_APPS = [
-    'pages.apps.PagesConfig',
+    'pages',
     'login',
     'django.contrib.admin',
     'django.contrib.auth',

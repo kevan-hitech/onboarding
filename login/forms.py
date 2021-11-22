@@ -33,7 +33,7 @@ class LoginForm(forms.Form):
 
 class PasswordForm(forms.Form):
 
-    email = forms.EmailField(required=True,
+    email = forms.CharField(required=True,
                            error_messages={'required': 'Required Field'},
     )
 
@@ -44,7 +44,7 @@ class PasswordForm(forms.Form):
 
 class RegisterForm(forms.Form):
 
-    email = forms.EmailField(required=True,
+    email = forms.CharField(required=True,
                            error_messages={'required': 'Required Field'},
     )
 

@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from ast import literal_eval
 import os, time
 
-@login_required(login_url='accounts/login')
+@login_required(login_url='/accounts/login')
 def test(request):
     if request.user.is_authenticated:
         username = request.user.username

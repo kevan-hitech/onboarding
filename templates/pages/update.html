@@ -22,17 +22,12 @@
         <div class="form">
             <div class="login">
                 <div class="login-header">
-                    <h2>EDIT: {{ sheet.title }}</h2>
-                    {% if sheet.t_img %}
-                        <img src="{{sheet.t_img.url}}" alt="Profile Picture">
-                    {% else%}
-                        <img src="None" alt="Profile Picture">
-                    {% endif %}
-                    <p>
-                    <small>
-                        <em>{{ sheet.category }}</em>
-                    </small>
-                    </p>
+                    <h2>EDIT: {{ sheet.name}}</h2>
+    
+                    
+                        
+                    
+                    
 
 
 
@@ -40,7 +35,7 @@
 
                     <hr>
                     <div class="viewing">
-                    <p><a href="/{{sheet.id}}">VIEW</a></p>
+                    <p><a href="/{{sheet.slug}}">VIEW</a></p>
                     </div>
 
                 </div>
@@ -55,76 +50,7 @@
 
             <form method="post" enctype="multipart/form-data" class="login-form">
             {% csrf_token %}
-            {{form.media}}
-
-            <div class="upload">
-                {{form.t_img}}
-            </div>
-            <div>
-                <table class="info">
-                <tr>
-                <td>Profile</td>
-                <td>
-                </td>
-                </tr>
-                <tr>
-                <td>Debut</td>
-                <td>{{form.t_debut}}</td>
-                </tr>
-                <tr>
-                <td>Form Signature</td>
-                <td>{{form.t_form}}</td>
-                </tr>
-                <tr>
-                <td>Affiliation</td>
-                <td>{{form.t_affil}}</td>
-                </tr>
-                <tr>
-                <td>Birthday</td>
-                <td>{{form.t_bday}}</td>
-                </tr>
-                <tr>
-                <td>Birthplace</td>
-                <td>{{form.t_bplace}}</td>
-                </tr>
-                <tr>
-                <td>Age</td>
-                <td>{{form.t_age}}</td>
-                </tr>
-                </table>
-            </div>
-            <hr><br>
-                <div class="body">
-                {{form.body}}
-                </div>
-
-            <div class="power">
-            <table id="power" class="power">
-            <tr>
-            <th>S</th>
-            <th>E</th>
-            <th>M</th>
-            <th>I</th>
-            <th>R</th>
-            <th>T</th>
-            <th>=</th>
-            </tr>
-            <tr>
-            <td>{{ form.rank_s }}</td>
-            <td>{{ form.rank_e }}</td>
-            <td>{{ form.rank_m }}</td>
-            <td>{{ form.rank_i }}</td>
-            <td>{{ form.rank_r }}</td>
-            <td>{{ form.rank_t }}</td>
-            <td><p id="total"></p></td>
-            </tr>
-            </table>
-            </div>
-
-
-            <h3>Trivia</h3>
-            <p>{{ form.section6 }}</p>
-
+            <p>{{ form.as_p }}</p>
 
             <input type="submit" value="Save"/>
 
